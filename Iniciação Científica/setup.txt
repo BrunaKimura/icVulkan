@@ -1,0 +1,5 @@
+export VULKAN_SDK_PATH='/home/bruna/Documentos/vulkan/VulkanSDK/1.0.57.0/x86_64'
+export CFLAGS='-std=c++11 -I$VULKAN_SDK_PATH/include'
+export LDFLAGS='-L$(VULKAN_SDK_PATH)/lib -L/usr/local/lib/ `pkg-config --static --libs glfw3` -lvulkan'
+
+g++ Teste1.cpp -o Teste1 -std=c++11 -I/home/bruna/Documentos/vulkan/VulkanSDK/1.0.57.0/x86_64/include -L/home/bruna/Documentos/vulkan/VulkanSDK/1.0.57.0/x86_64/lib -L/usr/local/lib/ `pkg-config --static --libs glfw3` -lvulkan
